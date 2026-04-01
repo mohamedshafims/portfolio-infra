@@ -693,8 +693,20 @@ h1 {
 }
 
 .cert-icon {
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cert-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .cert-content h3 {
