@@ -1,0 +1,785 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    color: #c9d1d9;
+    background: #0a0e14;
+}
+
+a {
+    color: #22d3ee;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #67e8f9;
+}
+
+/* ─── Nav ─── */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 14, 20, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1b2332;
+    z-index: 100;
+    padding: 0.8rem 2rem;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #22d3ee;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    color: #6b7280;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+nav ul a:hover {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+/* ─── Sections ─── */
+section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    letter-spacing: -0.3px;
+}
+
+.section-icon {
+    color: #22d3ee;
+    margin-right: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+h3 {
+    color: #e5e7eb;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+/* ─── Hero ─── */
+.hero {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+
+.terminal-line {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.prompt { color: #34d399; }
+.colon { color: #6b7280; }
+.path { color: #60a5fa; }
+.dollar { color: #6b7280; margin: 0 0.3rem; }
+.typed { color: #e5e7eb; }
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #f9fafb;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #22d3ee;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.tagline {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #1b2332;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f9fafb;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.2rem;
+}
+
+/* ─── About ─── */
+#about p {
+    color: #9ca3af;
+    font-size: 1rem;
+    max-width: 640px;
+}
+
+.location-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: #064e3b33;
+    border: 1px solid #065f4644;
+    border-radius: 6px;
+    color: #34d399;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ─── Experience Timeline ─── */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(180deg, #22d3ee 0%, #1b2332 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22d3ee;
+    border: 2px solid #0a0e14;
+    transform: translateX(-4px);
+}
+
+.timeline-item:last-child .timeline-marker {
+    background: #374151;
+}
+
+.timeline-content {
+    background: #111827;
+    border: 1px solid #1b2332;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.timeline-company {
+    font-size: 0.9rem;
+    color: #22d3ee;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-details {
+    list-style: none;
+}
+
+.timeline-details li {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.timeline-details li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #374151;
+}
+
+/* ─── Skills ─── */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background: #111827;
+    border: 1px solid #1b2332;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.skill-card:hover {
+    border-color: #22d3ee33;
+}
+
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-icon {
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.skill-card h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    color: #9ca3af;
+    padding: 0.3rem 0;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #22d3ee;
+    flex-shrink: 0;
+    opacity: 0.5;
+}
+
+/* ─── Projects ─── */
+.project-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.project-card {
+    background: #111827;
+    border: 1px solid #1b2332;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover {
+    border-color: #22d3ee33;
+}
+
+.project-card-top {
+    margin-bottom: 0.5rem;
+}
+
+.project-type {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #22d3ee;
+    font-weight: 600;
+}
+
+.project-card h3 {
+    font-size: 1.05rem;
+}
+
+.project-card p {
+    color: #9ca3af;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #22d3ee;
+    transition: gap 0.2s;
+}
+
+.project-link:hover {
+    color: #67e8f9;
+    text-decoration: none;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tags span {
+    background: #0e293d;
+    color: #22d3ee;
+    padding: 0.2rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* ─── Contact ─── */
+.contact-intro {
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    background: #111827;
+    border: 1px solid #1b2332;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    transition: border-color 0.2s;
+}
+
+.contact-card:hover {
+    border-color: #22d3ee33;
+    text-decoration: none;
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6b7280;
+    margin-bottom: 0.3rem;
+}
+
+.contact-value {
+    font-size: 0.9rem;
+    color: #22d3ee;
+    font-weight: 500;
+}
+
+.contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+/* LinkedIn icon styling */
+.contact-card[href*="linkedin"] .contact-icon {
+    color: #0a66c2;
+}
+
+/* GitHub icon styling */
+.contact-card[href*="github"] .contact-icon {
+    color: #f9fafb;
+}
+
+/* ─── Hero CTA ─── */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.btn.primary {
+    background: #22d3ee;
+    color: #0a0e14;
+}
+
+.btn.primary:hover {
+    background: #67e8f9;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    border: 1px solid #22d3ee;
+    color: #22d3ee;
+    background: transparent;
+}
+
+.btn.secondary:hover {
+    background: #22d3ee11;
+    transform: translateY(-2px);
+}
+
+/* ─── Contact Inline ─── */
+.contact-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1b2332;
+}
+
+.contact-item {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* ─── Featured Project Card ─── */
+.project-card.featured {
+    border: 2px solid #22d3ee44;
+    background: linear-gradient(135deg, #111827 0%, #0e293d 100%);
+}
+
+.project-card-top {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-status {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #34d399;
+    font-weight: 600;
+    background: #064e3b33;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.project-description {
+    color: #9ca3af;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.project-architecture {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #0a0e14;
+    border-radius: 6px;
+    border: 1px solid #1b2332;
+}
+
+.project-architecture h4 {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.architecture-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.arch-box {
+    background: #1b2332;
+    color: #22d3ee;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+.arch-arrow {
+    color: #6b7280;
+    font-size: 1.2rem;
+}
+
+.project-highlights {
+    margin: 1rem 0;
+}
+
+.project-highlights h4 {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-highlights ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.project-highlights li {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    padding: 0.25rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.project-highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #34d399;
+    font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #22d3ee;
+    transition: all 0.2s;
+}
+
+.project-link:hover {
+    color: #67e8f9;
+    text-decoration: none;
+}
+
+.link-icon {
+    font-size: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    background: #0e293d;
+    color: #22d3ee;
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* ─── Certifications ─── */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.cert-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #111827;
+    border: 1px solid #1b2332;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.cert-card:hover {
+    border-color: #22d3ee33;
+}
+
+.cert-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cert-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.cert-issuer {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* ─── Education ─── */
+.education-card {
+    background: #111827;
+    border: 1px solid #1b2332;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.education-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.education-institution {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* ─── Location Info ─── */
+.location-info {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1b2332;
+}
+
+.location-info p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ─── Footer ─── */
+footer {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    color: #374151;
+    border-top: 1px solid #1b2332;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+}
+
+.footer-note {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #1f2937;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 700px) {
+    h1 { font-size: 2.2rem; }
+    .hero { padding-top: 7rem; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    .stat-number { font-size: 1.4rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .contact-links { grid-template-columns: 1fr; }
+    nav ul { gap: 1rem; }
+    nav ul a { font-size: 0.75rem; }
+    .timeline-header { flex-direction: column; }
+    .timeline-date { margin-top: 0.2rem; }
+    .hero-cta { flex-direction: column; }
+    .contact-inline { flex-direction: column; gap: 0.8rem; }
+    .project-links { flex-direction: column; gap: 0.5rem; }
+    .architecture-diagram { flex-direction: column; }
+    .arch-arrow { transform: rotate(90deg); }
+    .certifications-grid { grid-template-columns: 1fr; }
+    .education-header { flex-direction: column; }
+    .education-date { margin-top: 0.2rem; }
+}
