@@ -85,10 +85,46 @@
                     <h3>Containers & Orchestration</h3>
                 </div>
                 <ul class="skill-list">
-                    <li><span class="skill-dot"></span>Kubernetes</li>
+                    <li><span class="skill-dot"></span>Kubernetes (LKE, AKS)</li>
                     <li><span class="skill-dot"></span>Docker</li>
                     <li><span class="skill-dot"></span>ArgoCD GitOps</li>
-                    <li><span class="skill-dot"></span>Helm, Kustomize</li>
+                    <li><span class="skill-dot"></span>Helm, Kustomize, cert-manager</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-icon">☁️</span>
+                    <h3>Cloud & Networking</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="skill-dot"></span>AWS</li>
+                    <li><span class="skill-dot"></span>Azure</li>
+                    <li><span class="skill-dot"></span>Cloudflare, Nginx</li>
+                    <li><span class="skill-dot"></span>Apache Apisix, WireGuard VPN</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-icon">🔗</span>
+                    <h3>Blockchain & Web3</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="skill-dot"></span>Cosmos SDK</li>
+                    <li><span class="skill-dot"></span>Ethereum/EVM, Layer 2 (OP Stack, Arbitrum)</li>
+                    <li><span class="skill-dot"></span>Solana, Sui, Polygon</li>
+                    <li><span class="skill-dot"></span>Wormhole Guardian, Horcrux</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-icon">🔄</span>
+                    <h3>CI/CD & Tools</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><span class="skill-dot"></span>GitHub Actions</li>
+                    <li><span class="skill-dot"></span>Jenkins</li>
+                    <li><span class="skill-dot"></span>Azure DevOps Pipelines</li>
+                    <li><span class="skill-dot"></span>Bitbucket CI/CD, Git</li>
                 </ul>
             </div>
             <div class="skill-card">
@@ -105,26 +141,26 @@
             </div>
             <div class="skill-card">
                 <div class="skill-card-header">
-                    <span class="skill-icon">☁️</span>
-                    <h3>Cloud & Networking</h3>
+                    <span class="skill-icon">🔒</span>
+                    <h3>Security</h3>
                 </div>
                 <ul class="skill-list">
-                    <li><span class="skill-dot"></span>AWS</li>
-                    <li><span class="skill-dot"></span>Azure</li>
-                    <li><span class="skill-dot"></span>Cloudflare</li>
-                    <li><span class="skill-dot"></span>Nginx, Apache Apisix</li>
+                    <li><span class="skill-dot"></span>HashiCorp Vault</li>
+                    <li><span class="skill-dot"></span>Ansible Vault</li>
+                    <li><span class="skill-dot"></span>UFW</li>
+                    <li><span class="skill-dot"></span>Veracode (SAST/SCA), SonarQube</li>
                 </ul>
             </div>
             <div class="skill-card">
                 <div class="skill-card-header">
-                    <span class="skill-icon">🔗</span>
-                    <h3>Blockchain & Web3</h3>
+                    <span class="skill-icon">💻</span>
+                    <h3>Languages & OS</h3>
                 </div>
                 <ul class="skill-list">
-                    <li><span class="skill-dot"></span>Cosmos SDK</li>
-                    <li><span class="skill-dot"></span>Ethereum/EVM, Layer 2</li>
-                    <li><span class="skill-dot"></span>OP Stack, Solana, Polkadot</li>
-                    <li><span class="skill-dot"></span>Wormhole Guardian</li>
+                    <li><span class="skill-dot"></span>Bash/Shell</li>
+                    <li><span class="skill-dot"></span>Python</li>
+                    <li><span class="skill-dot"></span>YAML</li>
+                    <li><span class="skill-dot"></span>Linux (RHEL, Ubuntu)</li>
                 </ul>
             </div>
             <div class="skill-card">
@@ -139,35 +175,13 @@
                     <li><span class="skill-dot"></span>Apache Kafka</li>
                 </ul>
             </div>
-            <div class="skill-card">
-                <div class="skill-card-header">
-                    <span class="skill-icon">🔄</span>
-                    <h3>CI/CD & Tools</h3>
-                </div>
-                <ul class="skill-list">
-                    <li><span class="skill-dot"></span>Jenkins</li>
-                    <li><span class="skill-dot"></span>Azure DevOps</li>
-                    <li><span class="skill-dot"></span>GitHub Actions</li>
-                    <li><span class="skill-dot"></span>Git</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <div class="skill-card-header">
-                    <span class="skill-icon">🔒</span>
-                    <h3>Security</h3>
-                </div>
-                <ul class="skill-list">
-                    <li><span class="skill-dot"></span>HashiCorp Vault</li>
-                    <li><span class="skill-dot"></span>Ansible Vault</li>
-                    <li><span class="skill-dot"></span>UFW</li>
-                </ul>
-            </div>
         </div>
     </section>
 
     <section id="experience">
         <h2><span class="section-icon">#</span> Work Experience</h2>
         <div class="timeline">
+            <!-- Forbole -->
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
@@ -177,19 +191,18 @@
                     </div>
                     <p class="timeline-company">Forbole &middot; Hong Kong</p>
                     <ul class="timeline-details">
-                        <li>Manage production blockchain infrastructure for 100+ networks across 6+ globally distributed bare-metal data centers, serving validators, full nodes, archive nodes, and RPC endpoints with high availability standards</li>
-                        <li>Onboarded 25+ new blockchain networks end-to-end — VM provisioning, Ansible automation, monitoring, APISIX routing, DNS, and firewall configuration</li>
-                        <li>Participate in on-call rotations, responding to incidents and resolving complex infrastructure issues through root-cause analysis; reduced MTTR through automated remediation</li>
-                        <li>Manage PostgreSQL databases for production services, performing database operations, backup/recovery procedures, and performance optimization</li>
-                        <li>Optimized infrastructure costs through bare-metal migrations from Linode cloud to Proxmox — reducing operational expenses while improving performance</li>
-                        <li>Maintain Apache APISIX API gateway routing traffic for 30+ blockchain RPC endpoints with high availability</li>
-                        <li>Expanded Prometheus monitoring stack with alert rules, integrated with Alertmanager routing to SquadCast</li>
-                        <li>Contributed to Kubernetes GitOps platform, deploying multiple ArgoCD applications on Linode LKE with automated sync, pruning, and self-healing</li>
-                        <li>Integrated HashiCorp Vault with Kubernetes using VaultStaticSecret CRDs for auto-refreshing secrets across production services</li>
-                        <li>Operated Wormhole Guardian bridge node and Horcrux threshold signing clusters for Cosmos validators, eliminating single points of failure</li>
+                        <li>Managed production blockchain infrastructure for 100+ networks across 6+ globally distributed bare-metal data centers, sustaining 99.9%+ uptime for validators, full nodes (Ethereum, L2, Cosmos), archive nodes, and RPC services.</li>
+                        <li>Onboarded 25+ blockchain networks end-to-end, covering VM provisioning, Ansible automation, monitoring, Apisix routing, DNS, and firewall configuration.</li>
+                        <li>Operate and maintain Apache Apisix API gateway routing high-throughput traffic for 30+ blockchain RPC endpoints across distributed infrastructure with high availability requirements.</li>
+                        <li>Expanded Prometheus-based monitoring and alerting by integrating Alertmanager with SquadCast and developing alert rules for validator health, node sync, and infrastructure availability.</li>
+                        <li>Executed major infrastructure migrations, including Linode-to-Proxmox node moves, Ansible inventory conversion from INI to YAML, and RPC traffic migration from Nginx to Apache Apisix while maintaining service continuity.</li>
+                        <li>Operated Wormhole Guardian infrastructure, multi-chain bridge full nodes, and Horcrux threshold signing for Cosmos validators, maintaining 100% signing availability and reducing key-management single points of failure.</li>
+                        <li>Handled on-call incident response for infrastructure and node outages, applying root-cause analysis, operational fixes, and targeted automation to reduce MTTR by 40%.</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- IBM -->
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
@@ -199,12 +212,12 @@
                     </div>
                     <p class="timeline-company">IBM India Private Limited &middot; India</p>
                     <ul class="timeline-details">
-                        <li>Configured CI/CD pipelines using Jenkins, Bitbucket CI/CD, and Azure DevOps Pipelines for microservices deployments across non-prod and prod environments</li>
-                        <li>Automated microservices deployment to Kubernetes clusters using Ansible playbooks, managing Docker image pulls from private registries</li>
-                        <li>Managed Azure IaaS infrastructure including Virtual Machines, Networks, Resource Groups, Auto Scaling, and VM Scale Set golden image upgrades</li>
-                        <li>Performed SAST and SCA vulnerability scans using Veracode, remediated security findings via SonarQube</li>
-                        <li>Created and managed DEV, ST, and UAT environments for major quarterly releases; mentored team members on DevOps processes</li>
-                        <li>Collaborated with cross-functional teams to troubleshoot and resolve production issues, reducing downtime</li>
+                        <li>Built and maintained CI/CD pipelines with Jenkins, Bitbucket CI/CD, and Azure DevOps Pipelines for non-production and production releases, reducing deployment time by 50%.</li>
+                        <li>Automated Kubernetes deployment workflows for 50+ microservices using Ansible playbooks and private container registries across multiple clusters.</li>
+                        <li>Managed Azure IaaS resources including Virtual Machines, Virtual Networks, Resource Groups, Auto Scaling, and VM Scale Set image upgrades.</li>
+                        <li>Performed SAST and SCA vulnerability scanning using Veracode and supported remediation and code quality efforts through SonarQube.</li>
+                        <li>Created and maintained DEV, ST, and UAT environments across 4 environment tiers for major quarterly releases and supported release coordination across teams.</li>
+                        <li>Collaborated with 10+ application and operations teams to troubleshoot production issues and improve service reliability.</li>
                     </ul>
                 </div>
             </div>
